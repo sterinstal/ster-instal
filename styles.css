@@ -647,6 +647,7 @@ input:focus {
 .frame-1179ajbtuh7 {
   width: 100%;
   max-width: 1200px;
+  position: relative;
 }
 .frame-1179ajb376 {
   max-width: 531px;
@@ -2211,12 +2212,12 @@ input:focus {
   height: 403px;
   overflow: hidden;
   position: relative;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 .final-version .frame-8474-5iUdR6 {
   background-color: #ecedf4;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 .final-version .image-59-KEJsOC {
@@ -2237,7 +2238,7 @@ input:focus {
   height: 403px;
   overflow: hidden;
   position: relative;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 .final-version .frame-8477-5iUdR6 {
@@ -2246,10 +2247,9 @@ input:focus {
   background-position: 50% 50%;
   background-size: cover;
   height: 403px;
-  margin-right: -176px;
   overflow: hidden;
   position: relative;
-  min-width: 320px;
+  min-width: 360px;
 }
 
 .final-version .cta-TRvxTD {
@@ -3049,6 +3049,36 @@ input:focus {
   cursor: pointer;
   font-size: 30px;
 }
+.varranty-container-mobile {
+  display: flex;
+  align-items: center;
+}
+.varranty-text {
+  background-color: transparent;
+  color: var(--foundation-greygrey-6);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  position: relative;
+  text-align: left;
+  margin-left: 16px;
+  font-weight: 500;
+}
+.varranty-container-web {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: -100px;
+  left: 0;
+}
+
+.realization-image {
+  width: 320px;
+  height: 320px;
+  object-fit: cover;
+}
 
 @media (min-width: 871px) {
   .separator-horizontal,
@@ -3056,8 +3086,14 @@ input:focus {
   .menu {
     display: none !important;
   }
+  .varranty-container-mobile {
+    display: none !important;
+  }
 }
 @media (max-width: 870px) {
+  .varranty-container-web {
+    display: none !important;
+  }
   .frame-1171275362-NYyjAK,
   .frame-1171275363-xbybsb,
   .frame-1171275370-P2Wu0C,
@@ -3134,7 +3170,7 @@ input:focus {
   .frame-14-R6OUxk {
     height: 60px !important;
   }
-  .idealny-klimat-o-kadej-porze-roku-6ca3sx,
+
   .figtree-bold-ebony-clay-48px,
   .zapewniamy-pene-wspa-6wDiwv,
   .korzystajc-z-naszych-rozwiza-otrzymujesz-P2Wu0C,
@@ -3143,8 +3179,10 @@ input:focus {
   .figtree-bold-white-48px {
     font-size: 48px !important;
   }
-  .heading-03TqFx {
-    font-size: 40px !important;
+  .heading-03TqFx,
+  .idealny-klimat-o-kadej-porze-roku-6ca3sx {
+    font-size: 36px !important;
+    font-weight: bold !important;
   }
   .frame-1171275397-NYyjAK {
     gap: 32px !important;
