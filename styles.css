@@ -398,7 +398,7 @@ input:focus {
 .final-version .hero-ciy8fA {
   align-self: stretch;
   background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/hero.svg);
+  background-image: url(./assets/hero-background.png);
   background-position: 50% 50%;
   background-size: cover;
   min-height: 974px;
@@ -815,7 +815,7 @@ input:focus {
 
 .final-version .frame-1171275361-fert9N {
   background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-1171275361.svg);
+  background-image: url(./assets/section-1-img.png);
   background-position: 50% 50%;
   background-size: cover;
   box-shadow: 0px 4px 85.69999694824219px #8da6e429;
@@ -824,6 +824,7 @@ input:focus {
   min-height: 429px;
   min-width: 340px;
   width: 100%;
+  object-fit: fill;
   overflow: hidden;
   position: relative;
 }
@@ -1261,7 +1262,7 @@ input:focus {
 
 .final-version .image-ceXxkj {
   background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/image.png);
+  background-image: url(./assets/section-2-img.png);
   background-position: 50% 50%;
   background-size: cover;
   box-shadow: 0px 4px 85.69999694824219px #8da6e429;
@@ -1283,7 +1284,7 @@ input:focus {
 }
 
 .final-version .frame-1171275362-C4EwEu {
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-1171275362.svg);
+  background-image: url(./assets/section-3-img.png);
   background-position: 50% 50%;
   background-size: cover;
   box-shadow: 0px 4px 85.69999694824219px #8da6e429;
@@ -1569,7 +1570,7 @@ input:focus {
 }
 
 .final-version .frame-1171275362-0tjJch {
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-1171275362-1.png);
+  background-image: url(./assets/section-4-img.png);
   background-position: 50% 50%;
   background-size: cover;
   box-shadow: 0px 4px 85.69999694824219px #8da6e429;
@@ -2204,17 +2205,6 @@ input:focus {
   gap: 32px;
 }
 
-.final-version .frame-8473-5iUdR6 {
-  background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8473.svg);
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 403px;
-  overflow: hidden;
-  position: relative;
-  min-width: 360px;
-}
-
 .final-version .frame-8474-5iUdR6 {
   background-color: #ecedf4;
   min-width: 360px;
@@ -2228,28 +2218,6 @@ input:focus {
   position: absolute;
   top: 0px;
   width: 565px;
-}
-
-.final-version .frame-8475-5iUdR6 {
-  background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8475@2x.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 403px;
-  overflow: hidden;
-  position: relative;
-  min-width: 360px;
-}
-
-.final-version .frame-8477-5iUdR6 {
-  background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8477@2x.png);
-  background-position: 50% 50%;
-  background-size: cover;
-  height: 403px;
-  overflow: hidden;
-  position: relative;
-  min-width: 360px;
 }
 
 .final-version .cta-TRvxTD {
@@ -2391,12 +2359,11 @@ input:focus {
 
 .final-version .frame-8474-kGBmyx {
   background-color: transparent;
-  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8474.png);
+  background-image: url(./assets/contact-img.png);
   background-position: 50% 50%;
   background-size: cover;
   flex: 1;
   flex-grow: 1;
-  transform: rotate(180deg);
   min-width: 350px;
 }
 
