@@ -1,0 +1,3191 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css');
+
+@import url('https://fonts.googleapis.com/css?family=Figtree:500,700,600,400');
+
+@import url('https://px.animaapp.com/67b36e91a9452ddc546c92f4.67b36e92a9452ddc546c92f7.Z50rTbr.hch.png');
+
+* {
+  scroll-behavior: smooth;
+}
+
+.screen textarea:focus,
+.screen input:focus {
+  outline: none;
+}
+
+.screen * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+
+.screen div {
+  -webkit-text-size-adjust: none;
+}
+
+.component-wrapper a {
+  display: contents;
+  pointer-events: auto;
+  text-decoration: none;
+}
+
+.component-wrapper * {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.component-wrapper a *,
+.component-wrapper input,
+.component-wrapper video,
+.component-wrapper iframe {
+  pointer-events: auto;
+}
+
+.component-wrapper.not-ready,
+.component-wrapper.not-ready * {
+  visibility: hidden !important;
+}
+
+.screen a {
+  display: contents;
+  text-decoration: none;
+}
+
+.full-width-a {
+  width: 100%;
+}
+
+.full-height-a {
+  height: 100%;
+}
+
+.container-center-vertical {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  height: 100%;
+  pointer-events: none;
+}
+
+.container-center-vertical > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.container-center-horizontal {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  pointer-events: none;
+  width: 100%;
+}
+
+.container-center-horizontal > * {
+  flex-shrink: 0;
+  pointer-events: auto;
+}
+
+.auto-animated div {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated input {
+  --z-index: -1;
+  opacity: 0;
+  position: absolute;
+}
+
+.auto-animated .container-center-vertical,
+.auto-animated .container-center-horizontal {
+  opacity: 1;
+}
+
+.overlay-base {
+  display: none;
+  height: 100%;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.overlay-base.animate-appear {
+  align-items: center;
+  animation: reveal 0.3s ease-in-out 1 normal forwards;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  opacity: 0;
+}
+
+.overlay-base.animate-disappear {
+  animation: reveal 0.3s ease-in-out 1 reverse forwards;
+  display: block;
+  opacity: 1;
+  pointer-events: none;
+}
+
+.overlay-base.animate-disappear * {
+  pointer-events: none;
+}
+
+@keyframes reveal {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-nodelay {
+  animation-delay: 0s;
+}
+
+.align-self-flex-start {
+  align-self: flex-start;
+}
+
+.align-self-flex-end {
+  align-self: flex-end;
+}
+
+.align-self-flex-center {
+  align-self: flex-center;
+}
+
+.valign-text-middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.valign-text-bottom {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+
+.listeners-active,
+.listeners-active * {
+  pointer-events: auto;
+}
+
+.hidden,
+.hidden * {
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.smart-layers-pointers,
+.smart-layers-pointers * {
+  pointer-events: auto;
+  visibility: visible;
+}
+
+.listeners-active-click,
+.listeners-active-click * {
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --big-stone: #15243c;
+  --black: #000000;
+  --foundation-greygrey-10: #15161f;
+  --foundation-greygrey-4: #abacc1;
+  --foundation-greygrey-5: #545766;
+  --foundation-greygrey-6: #2f3245;
+  --foundation-greygrey-7: #282b3b;
+  --foundation-greygrey-8: #212431;
+  --foundation-greygrey-9: #1b1d27;
+  --foundationgreygrey-1: #f1f3f6;
+  --foundationwhitewhite-00: #ffffff;
+  --foundationwhitewhite-50: #fbfbfb;
+  --mirage: #111724;
+  --mystic: #e7e9ee;
+  --primary100: #cee0fa;
+  --primary200: #9dc5ff;
+  --primary600: #094fb7;
+  --primary900: #02142e;
+  --shuttle-gray: #5b657a;
+  --white: #ffffff7a;
+
+  --font-size-l: 18px;
+  --font-size-m: 16px;
+  --font-size-s: 14px;
+  --font-size-xl: 20px;
+  --font-size-xxl: 32px;
+  --font-size-xxxl: 40px;
+  --font-size-xxxxl: 48px;
+
+  --font-family-figtree: 'Figtree', Helvetica;
+}
+.figtree-normal-tuna-16px {
+  color: var(--foundation-greygrey-6);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.figtree-bold-tuna-16px {
+  color: var(--foundation-greygrey-6);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.figtree-normal-steel-gray-14px {
+  color: var(--foundation-greygrey-8);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.figtree-semi-bold-absolute-zero-18px {
+  color: var(--primary600);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.figtree-bold-ebony-clay-48px {
+  color: var(--foundation-greygrey-7);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.figtree-semi-bold-big-stone-14px {
+  color: var(--big-stone);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.figtree-medium-white-20px {
+  color: var(--foundationwhitewhite-00);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.figtree-normal-alabaster-14px {
+  color: var(--foundationwhitewhite-50);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.figtree-semi-bold-mirage-18px {
+  color: var(--mirage);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.figtree-bold-absolute-zero-16px {
+  color: var(--primary600);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.figtree-bold-mirage-20px {
+  color: var(--foundation-greygrey-9);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.figtree-normal-tuna-14px {
+  color: var(--foundation-greygrey-6);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.figtree-normal-shuttle-gray-16px {
+  color: var(--shuttle-gray);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.figtree-semi-bold-tuna-16px {
+  color: var(--foundation-greygrey-6);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.figtree-semi-bold-ebony-clay-24px {
+  color: var(--foundation-greygrey-7);
+  font-family: var(--font-family-figtree);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.figtree-semi-bold-white-20px {
+  color: var(--foundationwhitewhite-00);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+}
+
+.figtree-bold-white-48px {
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.figtree-normal-scarpa-flow-16px {
+  color: var(--foundation-greygrey-5);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+.figtree-normal-white-16px {
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+}
+
+:root {
+}
+
+/* screen - final-version */
+
+.final-version {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  left: 0px;
+  overflow-x: hidden;
+  position: relative;
+  top: 0px;
+}
+
+.final-version .hero-ciy8fA {
+  align-self: stretch;
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/hero.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  min-height: 974px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.final-version .frame-14-R6OUxk {
+  align-items: center;
+  background-color: #fafcff;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  border-color: var(--foundationgreygrey-1);
+  border-left-style: none;
+  border-right-style: none;
+  border-top-style: none;
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  display: flex;
+  height: 80px;
+  justify-content: center;
+  left: 0px;
+  overflow: hidden;
+  padding: 7px 10;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.final-version .frame-1171275414-LScXtR {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .frame-8432-xox1Hq {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 24px;
+  position: relative;
+}
+
+.final-version .logo-horyzontalnie-bez-napisow-CvMxk7 {
+  height: 42.6846923828125px;
+  margin-top: -1.32px;
+  width: 164px;
+}
+
+.final-version .frame-19-CvMxk7 {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 40px;
+  position: relative;
+}
+
+.final-version .o-nas-JQj3Q6 {
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .usugi-JQj3Q6 {
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .realizacje-JQj3Q6 {
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-8431-xox1Hq {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 8px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  height: 40px;
+  padding: 0px 0px 0px 24px;
+  position: relative;
+}
+
+.final-version .phone-lYrxiy {
+  background-color: transparent;
+  height: 24px;
+  overflow: hidden;
+  position: relative;
+  width: 24px;
+}
+
+.final-version .vector-EZuomG {
+  height: 24px;
+  left: -7127px;
+  top: -563px;
+  width: 24px;
+}
+
+.final-version .vector-6s393K {
+  height: 18px;
+  left: 3px;
+  top: 3px;
+  width: 18px;
+}
+
+.telefon {
+  color: #ffffff;
+}
+.telefon-black {
+  color: #000000;
+}
+
+.final-version .x48-514-146-700-lYrxiy {
+  color: var(--foundation-greygrey-10);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.4px;
+  line-height: normal;
+  width: fit-content;
+}
+
+.final-version .frame-1171275377-R6OUxk {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin-top: 140px;
+}
+.frame-56rh5 {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  background-color: transparent;
+  border: 1px solid;
+  border-color: var(--foundationgreygrey-1);
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  overflow: hidden;
+}
+
+.final-version .frame-8453-gHZY1I {
+  -webkit-backdrop-filter: blur(36.400001525878906px) brightness(100%);
+  align-self: stretch;
+  backdrop-filter: blur(36.400001525878906px) brightness(100%);
+  background-color: var(--white);
+  border: 0px none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 16px;
+  overflow: hidden;
+  padding: 24px 40px;
+}
+
+.final-version .klimatyzacja-6o8sGx {
+  letter-spacing: 0.48px;
+  line-height: 28.8px;
+  text-align: center;
+  width: fit-content;
+}
+
+.final-version .frame-8454-gHZY1I {
+  -webkit-backdrop-filter: blur(36.400001525878906px) brightness(100%);
+  align-self: stretch;
+  backdrop-filter: blur(36.400001525878906px) brightness(100%);
+  background-color: var(--white);
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  overflow: hidden;
+  padding: 24px 40px;
+}
+
+.final-version .frame-1171275405-ywAQL8 {
+  background-color: transparent;
+  height: 64px;
+  position: relative;
+  width: 64px;
+}
+
+.final-version .rekuperacja-ywAQL8 {
+  height: 42px;
+  letter-spacing: 0.48px;
+  line-height: 28.8px;
+  text-align: center;
+}
+
+.final-version .frame-8455-gHZY1I {
+  align-items: center;
+  backdrop-filter: blur(8px) brightness(100%);
+  background-color: var(--white);
+  border: 0px none;
+  flex: 1;
+  flex-direction: column;
+  gap: 16px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 24px 40px;
+}
+
+.final-version .pompy-ciepa-M1Fpu9 {
+  height: 42px;
+  letter-spacing: 0.48px;
+  line-height: 28.8px;
+  text-align: center;
+}
+
+.final-version .frame-1171275376-R6OUxk {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+  margin-top: 220px;
+}
+.frame-1179ajbtuh7 {
+  width: 100%;
+  max-width: 1200px;
+}
+.frame-1179ajb376 {
+  max-width: 531px;
+}
+
+.final-version .komfort-i-energooszczdno-przez-cay-rok-PyNStL {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.36px;
+  line-height: 25.2px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-17-PyNStL {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275360-f1gTeA {
+  align-self: stretch;
+  flex: 0 0 auto;
+  gap: 16px;
+  width: 100%;
+}
+
+.final-version .idealny-klimat-o-kadej-porze-roku-6ca3sx {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundation-greygrey-8);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 52.8px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .oferujemy-kompleksow-6ca3sx {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundation-greygrey-6);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  line-height: 25.2px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .cta-f1gTeA {
+  align-items: center;
+  background: linear-gradient(90deg, #1c5bba 0%, #003c67 100%);
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  display: inline-flex;
+  gap: 3px;
+  height: 48px;
+  padding: 8px 32px;
+}
+
+.cta-f1gTeA:hover {
+  opacity: 90%;
+}
+
+.final-version .kontakt-wiCjKN {
+  background-color: transparent;
+  letter-spacing: 0.4px;
+  line-height: normal;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.final-version .frame-1171275375-f1gTeA {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275372-4SNJRT {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.final-version .nisze-rachunki-WiNZKp {
+  color: var(--foundation-greygrey-7);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  line-height: normal;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-1171275373-4SNJRT {
+  align-items: center;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+}
+
+.final-version .lepsza-jako-powietrza-ShVg6F {
+  background-color: transparent;
+  color: var(--foundation-greygrey-7);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.32px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .o-nas-co-robimy-124-ciy8fA {
+  align-items: center;
+  align-self: stretch;
+  background-color: #fcfeff;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  overflow: hidden;
+  padding: 80px 0;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275362-NYyjAK {
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 80px;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .frame-1171275361-fert9N {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-1171275361.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  flex: 1;
+  flex-grow: 1;
+  min-height: 429px;
+  min-width: 340px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.final-version .frame-1171275398-gNY7ex {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-18-fxZPCp {
+  gap: 24px;
+}
+
+.final-version .frame-18-YfEPsS {
+  gap: 12px;
+}
+
+.final-version .jestemy-renomowan-firm-z-maopolski-2XjIT6 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .specjalizujemy-si-w-2XjIT6 {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundation-greygrey-7);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.64px;
+  line-height: 38.4px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .dziaamy-na-terenie-w-fxZPCp {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8458-fxZPCp {
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.final-version .frame-8454-Ql2ggN {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .doradzamy-przy-wyborze-produktw-bzLsTo {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-8453-Ql2ggN {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .zapewniamy-sprawdzony-i-jakociowy-sprzt-mFmb9e {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .projektujemy-rozwizanie-hn7wJs {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-8452-Ql2ggN {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .montujemy-instalacje-ouVNqZ {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-8451-Ql2ggN {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .serwisujemy-wykonane-instalacje-srwS42 {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-1171275397-NYyjAK {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 40px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .frame-1171275365-pohat3 {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 12px;
+  position: relative;
+}
+
+.final-version .x10-lat-hqVFYn {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    180deg,
+    rgb(49.00781325995922, 217.8125050663948, 68.70169669389725) 0%,
+    rgb(58.00000034272671, 132.0000073313713, 238.00000101327896) 100%
+  );
+  background-clip: text;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 67.2px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+  text-fill-color: transparent;
+  text-wrap: nowrap;
+  width: fit-content;
+}
+
+.final-version .dowiadczenia-w-brany-hqVFYn {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-1171275363-pohat3 {
+  align-items: center;
+  border-radius: 4px;
+  flex: 1;
+  flex-grow: 1;
+  gap: 12px;
+}
+
+.final-version .x99-1x0TiR {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    180deg,
+    rgb(49.00781325995922, 217.8125050663948, 68.70169669389725) 0%,
+    rgb(58.00000034272671, 132.0000073313713, 238.00000101327896) 100%
+  );
+  background-clip: text;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 67.2px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+  text-fill-color: transparent;
+  width: fit-content;
+}
+
+.final-version .zadowolonych-klientw-1x0TiR {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-1171275366-pohat3 {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 12px;
+  position: relative;
+}
+
+.final-version .x200-5HkJcI {
+  -webkit-background-clip: text !important;
+  -webkit-text-fill-color: transparent;
+  background: linear-gradient(
+    180deg,
+    rgb(49.00781325995922, 217.8125050663948, 68.70169669389725) 0%,
+    rgb(58.00000034272671, 132.0000073313713, 238.00000101327896) 100%
+  );
+  background-clip: text;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 67.2px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+  text-fill-color: transparent;
+  width: fit-content;
+}
+
+.final-version .zrealizowanych-projektw-5HkJcI {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .usugi-ciy8fA {
+  align-items: center;
+  align-self: stretch;
+  background-color: #fcfeff;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 3px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 120px 0;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275367-jdUhdQ {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 120px 0;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .frame-1171275389-xbybsb {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .zapoznaj-si-z-nasz-ofert-NhkObK {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.96px;
+  line-height: 57.6px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .frame-1171275362-xbybsb {
+  align-items: center;
+  align-self: stretch;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 80px;
+  width: 100%;
+}
+
+.final-version .frame-1171275363-ceXxkj {
+  align-items: flex-start;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  justify-content: center;
+}
+
+.final-version .frame-18-qBkA97 {
+  gap: 12px;
+}
+
+.final-version .chd-latem-ciepo-zim-S21Seh {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .klimatyzacja-S21Seh {
+  align-self: stretch;
+  letter-spacing: 0.96px;
+  line-height: 57.6px;
+  text-align: left;
+}
+
+.final-version .oferujemy-monta-i-se-P4FO05 {
+  letter-spacing: 0.32px;
+  line-height: 22.4px;
+  margin-top: -1px;
+}
+
+.final-version .frame-8458-P4FO05 {
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.final-version .frame-8454-IHXwza {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .cich-i-energooszczdn-prac-VaIWko {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .frame-8453-IHXwza {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .oczyszczanie-powietr-xlwAXx {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .moliwo-dogrzewania-pomieszcze-zim-PROxmH {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .nie-wiesz-jaki-klima-P4FO05 {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .span0-fB9Ico {
+  letter-spacing: 0.05px;
+}
+
+.final-version .span1-fB9Ico {
+  letter-spacing: 0.05px;
+  text-decoration: underline;
+}
+
+.final-version .span2-fB9Ico {
+  letter-spacing: 0.05px;
+}
+
+.final-version .image-ceXxkj {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/image.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  flex: 1;
+  flex-grow: 1;
+  min-height: 394px;
+  min-width: 340px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.final-version .frame-1171275363-xbybsb {
+  align-items: center;
+  align-self: stretch;
+  flex: 0 0 auto;
+  gap: 80px;
+  width: 100%;
+}
+
+.final-version .frame-1171275362-C4EwEu {
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-1171275362.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  flex: 1;
+  flex-grow: 1;
+  min-height: 394px;
+  min-width: 340px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.final-version .frame-1171275363-C4EwEu {
+  align-items: flex-start;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  justify-content: center;
+}
+
+.final-version .frame-18-sqmlsj {
+  gap: 12px;
+}
+
+.final-version .zdrowe-powietrze-i-n-qtnJ1k {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .rekuperacja-qtnJ1k {
+  letter-spacing: 0.96px;
+  line-height: 57.6px;
+  text-align: left;
+}
+
+.final-version .to-system-wentylacji-nyIJjO {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8458-nyIJjO {
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.final-version .frame-8454-t33Qx2 {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .oddychasz-wieym-filt-ljEeKk {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .span0-c3Mz8j {
+}
+
+.final-version .span1-c3Mz8j {
+}
+
+.final-version .frame-8453-t33Qx2 {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .oszczdzasz-na-ogrzew-mRBZgx {
+  background-color: transparent;
+  color: transparent;
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-m);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .span0-JCxRTG {
+  font-style: normal;
+}
+
+.final-version .span1-JCxRTG {
+  font-style: normal;
+}
+
+.final-version .span2-JCxRTG {
+  font-style: normal;
+}
+
+.final-version .span3-JCxRTG {
+  color: var(--foundation-greygrey-10);
+  font-style: normal;
+  font-weight: 700;
+}
+
+.final-version .span4-JCxRTG {
+  font-style: normal;
+}
+
+.final-version .redukujesz-wilgo-i-z-RhgOhx {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .rekuperacja-to-ideal-nyIJjO {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .span0-3AGTUs {
+  letter-spacing: 0.05px;
+}
+
+.final-version .span1-3AGTUs {
+  letter-spacing: 0.05px;
+  text-decoration: underline;
+}
+
+.final-version .span2-3AGTUs {
+  letter-spacing: 0.05px;
+}
+
+.final-version .frame-1171275364-xbybsb {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 80px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-18-r6JXry {
+  gap: 12px;
+}
+
+.final-version .ekologiczne-ogrzewanie-bez-gazu-i-wgla-P9OYdr {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .pompy-ciepa-P9OYdr {
+  letter-spacing: 0.96px;
+  line-height: 57.6px;
+  text-align: left;
+}
+
+.final-version .pompy-ciepa-to-nowoc-uPquMK {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: 22.4px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8458-uPquMK {
+  flex-direction: column;
+  gap: 4px;
+  justify-content: center;
+}
+
+.final-version .frame-8454-SEV0YJ {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .oszczdno-nisze-rachunki-za-ogrzewanie-x2xIrW {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .span0-NxNsMK {
+}
+
+.final-version .span1-NxNsMK {
+}
+
+.final-version .frame-8453-SEV0YJ {
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+}
+
+.final-version .ekologia-brak-emisji-spalin-i-co-g0qgBx {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .span0-Vi8ksM {
+}
+
+.final-version .span1-Vi8ksM {
+}
+
+.final-version .nowoczesno-moliwo-pe-9vh0ak {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .span0-BUsmJT {
+}
+
+.final-version .span1-BUsmJT {
+}
+
+.final-version .zamontowane-przez-na-uPquMK {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.32px;
+  line-height: 22.4px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .span0-OPMzVK {
+  letter-spacing: 0.05px;
+}
+
+.final-version .span1-OPMzVK {
+  letter-spacing: 0.05px;
+  text-decoration: underline;
+}
+
+.final-version .span2-OPMzVK {
+  letter-spacing: 0.05px;
+}
+
+.final-version .frame-1171275362-0tjJch {
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-1171275362-1.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  flex: 1;
+  flex-grow: 1;
+  min-height: 394px;
+  min-width: 340px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.final-version .cta-ciy8fA {
+  align-items: flex-start;
+  align-self: stretch;
+  background: linear-gradient(
+    180deg,
+    rgb(33.00000183284283, 36.00000165402889, 49.00000087916851) 0%,
+    rgb(15.406249556690454, 34.743747264146805, 63.75) 100%
+  );
+  display: flex;
+  flex: 0 0 auto;
+  gap: 80px;
+  padding: 120px 0;
+  width: 100%;
+}
+
+.final-version .frame-1171275368-jgCQdn {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .frame-1171275400-UEwIxO {
+  align-items: flex-start;
+  background-color: transparent;
+  box-shadow: 0px 4px 85.69999694824219px #8da6e429;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  position: relative;
+}
+
+.final-version .image-xyqCuM {
+  align-self: stretch;
+  background-color: #d9d9d9;
+  height: 461px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-8471-UEwIxO {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  position: relative;
+}
+
+.final-version .frame-8472-7l2oix {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .od-doradztwa-projektu-po-monta-i-serwis-6wDiwv {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--primary200);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0.36px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .zapewniamy-pene-wspa-6wDiwv {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundationwhitewhite-00);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: normal;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8458-7l2oix {
+  align-self: stretch;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.final-version .frame-8439-aOnnAk {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 13px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .text-KcSAA5 {
+  margin-bottom: -2px;
+  margin-top: -6px;
+}
+
+.final-version .bezpatna-konsultacja-i-analiza-potrzeb-BUVo4U {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .omwimy-twoje-potrzeb-BUVo4U {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 19.6px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8455-aOnnAk {
+  align-items: flex-start;
+  background-color: transparent;
+  flex: 0 0 auto;
+  gap: 13px;
+  width: 100%;
+}
+
+.final-version .text-wezCTo {
+  margin-bottom: -3.4px;
+  margin-top: -4.6px;
+}
+
+.final-version .przygotowanie-oferty-ETMrVt {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .przygotujemy-dla-cie-ETMrVt {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 19.6px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8458-aOnnAk {
+  align-self: stretch;
+  gap: 13px;
+  width: 100%;
+}
+
+.final-version .text-dHRSnf {
+  margin-bottom: -3.4px;
+  margin-top: -4.6px;
+}
+
+.final-version .wizyta-i-pomiary-xQMbVl {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .przyjedziemy-na-miej-xQMbVl {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 19.6px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8456-aOnnAk {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 13px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .text-Ur9M7E {
+  margin-bottom: -3.4px;
+  margin-top: -4.6px;
+}
+
+.final-version .monta-instalacji-AGSLOI {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .zainstalujemy-wybran-AGSLOI {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 19.6px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-8457-aOnnAk {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 13px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .text-ekirV5 {
+  margin-bottom: -3.4px;
+  margin-top: -4.6px;
+}
+
+.final-version .serwis-i-wsparcie-0DQ4xM {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .oferujemy-rwnie-wspa-0DQ4xM {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 19.6px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .usugi-TRvxTD {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--foundationwhitewhite-00);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 120px 0;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .korzystajc-z-naszych-rozwiza-otrzymujesz-P2Wu0C {
+  background-color: transparent;
+  color: var(--foundation-greygrey-7);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 48px;
+  margin-top: -1px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .frame-1171275370-P2Wu0C {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  position: relative;
+  max-width: 1200px;
+  width: 100%;
+}
+
+.final-version .frame-8464-uyGmdn {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--primary100);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-top-style: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 7px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 32px 24px;
+  position: relative;
+}
+
+.final-version .nisze-rachunki-lpetib {
+  align-self: stretch;
+  letter-spacing: 0.4px;
+  line-height: 24px;
+  text-align: center;
+}
+
+.final-version .nowoczesne-systemy-s-lpetib {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 16.8px;
+  margin-bottom: -13px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .frame-8470-uyGmdn {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--primary100);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-top-style: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 7px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 32px 24px;
+  position: relative;
+}
+
+.final-version .czystsze-powietrze-3ZIoyF {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.4px;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .filtry-eliminuj-zani-3ZIoyF {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 16.8px;
+  margin-bottom: -13px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .frame-8468-uyGmdn {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  border-bottom-style: none;
+  border-color: var(--primary100);
+  border-left-style: none;
+  border-right-style: solid;
+  border-right-width: 2px;
+  border-top-style: none;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 7px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 32px 24px;
+  position: relative;
+}
+
+.final-version .komfort-przez-cay-rok-m3n0NG {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.4px;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .optymalna-temperatur-m3n0NG {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 16.8px;
+  margin-bottom: -13px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .frame-8469-uyGmdn {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 7px;
+  justify-content: center;
+  overflow: hidden;
+  padding: 32px 24px;
+  position: relative;
+}
+
+.final-version .ekologiczne-rozwizania-QvxX2A {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.4px;
+  line-height: 24px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .wykorzystujemy-energ-QvxX2A {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.28px;
+  line-height: 16.8px;
+  margin-bottom: -13px;
+  position: relative;
+  text-align: center;
+}
+
+.final-version .usugi-g0oXkU {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--foundationwhitewhite-00);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  overflow: hidden;
+  padding: 80px 0;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275413-EJeREk {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .co-mwi-o-nas-klienci-xOoXfF {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundation-greygrey-7);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0.8px;
+  line-height: 48px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-1171275404-xOoXfF {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275402-t4sxxr {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275403-WauKBC {
+  align-items: center;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 3px;
+  justify-content: center;
+  padding: 8px 0px;
+}
+
+.final-version .profesjonalizm-na-na-nnUTJk {
+  background-color: transparent;
+  color: var(--foundation-greygrey-5);
+  flex: 1;
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  line-height: 23.4px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-1171275403-t4sxxr {
+  align-items: flex-start;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px;
+}
+
+.final-version .frame-1171275403-DHQbpj {
+  align-items: center;
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  padding: 8px 0px;
+  width: 850px;
+}
+
+.final-version .mateusz-z-tarnowa-P5E1zX {
+  background-color: transparent;
+  color: var(--foundation-greygrey-5);
+  flex: 1;
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.36px;
+  line-height: 23.4px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .realizacje-ciy8fA {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--foundationwhitewhite-00);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 59px;
+  overflow: hidden;
+  padding: 103px 0;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275412-gLQkWG {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 59px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .realizacje-I1xN1P {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0.96px;
+  line-height: 57.6px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-1171275411-I1xN1P {
+  align-items: center;
+  overflow-x: auto;
+  gap: 32px;
+}
+
+.final-version .frame-8473-5iUdR6 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8473.svg);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 403px;
+  overflow: hidden;
+  position: relative;
+  min-width: 320px;
+}
+
+.final-version .frame-8474-5iUdR6 {
+  background-color: #ecedf4;
+  min-width: 320px;
+}
+
+.final-version .image-59-KEJsOC {
+  background-color: transparent;
+  height: 403px;
+  left: -122px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 565px;
+}
+
+.final-version .frame-8475-5iUdR6 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8475@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 403px;
+  overflow: hidden;
+  position: relative;
+  min-width: 320px;
+}
+
+.final-version .frame-8477-5iUdR6 {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8477@2x.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  height: 403px;
+  margin-right: -176px;
+  overflow: hidden;
+  position: relative;
+  min-width: 320px;
+}
+
+.final-version .cta-TRvxTD {
+  align-items: flex-start;
+  background: linear-gradient(
+    180deg,
+    rgb(33.00000183284283, 36.00000165402889, 49.00000087916851) 0%,
+    rgb(15.406249556690454, 34.743747264146805, 63.75) 100%
+  );
+  display: flex;
+  flex: 0 0 auto;
+  gap: 80px;
+  overflow: hidden;
+  padding: 120px 0;
+  width: 100%;
+}
+
+.final-version .frame-1171275388-0s7r4x {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  gap: 80px;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .frame-1171275384-kGBmyx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  position: relative;
+  width: 540px;
+}
+
+.final-version .frame-1171275411-GSnVcp {
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.final-version .nie-czekaj-cOCD8o {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--primary200);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xl);
+  font-style: normal;
+  font-weight: 600;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .skontaktuj-si-z-nami-ju-dzi-cOCD8o {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundationwhitewhite-00);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: 0px;
+  line-height: 57.6px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .wsplnie-wybierzemy-i-cOCD8o {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundationwhitewhite-00);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-l);
+  font-style: normal;
+  font-weight: 500;
+  letter-spacing: 0px;
+  line-height: 21.6px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-1171275409-GSnVcp {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 100%;
+}
+
+.final-version .frame-1171275407-UgbaZ3 {
+  align-items: center;
+  background-color: #5b91e12b;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 24px;
+  position: relative;
+  width: 287px;
+}
+
+.final-version .frame-1171275407-gQs1OM {
+  background-color: transparent;
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.final-version .x48-514-146-700-gQs1OM {
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 24px;
+}
+
+.final-version .frame-1171275409-UgbaZ3 {
+  align-items: center;
+  background-color: #5b91e12b;
+  display: inline-flex;
+  gap: 24px;
+  padding: 0px 24px 0px 0px;
+}
+
+.final-version .frame-1171275407-qaxPL1 {
+  background-color: transparent;
+  height: 48px;
+  position: relative;
+  width: 48px;
+}
+
+.final-version .biurosterinstalgmailcom-qaxPL1 {
+  line-height: 24px;
+  width: fit-content;
+}
+
+.final-version .frame-8474-kGBmyx {
+  background-color: transparent;
+  background-image: url(https://cdn.animaapp.com/projects/67b36e94a9452ddc546c92f9/releases/67b36ee4ff87c1631d76cc80/img/frame-8474.png);
+  background-position: 50% 50%;
+  background-size: cover;
+  flex: 1;
+  flex-grow: 1;
+  transform: rotate(180deg);
+  min-width: 350px;
+}
+
+.final-version .sectionfaq-ciy8fA {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--foundationwhitewhite-00);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 40px;
+  padding: 80px 0;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .heading-and-paragraph-p5CwNn {
+  align-items: flex-start;
+  background-color: transparent;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 8px;
+  position: relative;
+}
+
+.final-version .heading-03TqFx {
+  background-color: transparent;
+  color: var(--mirage);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-xxxl);
+  font-style: normal;
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  line-height: 56px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+  width: fit-content;
+}
+
+.final-version .images-p5CwNn {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  width: 100%;
+  max-width: 845px;
+}
+
+.final-version .faq-item-SSbhmA {
+  box-shadow: 0px 13px 60px 9px #b6bacd33;
+}
+
+.final-version .plus-nH2xR3 {
+  background-color: transparent;
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.final-version .faq-item-Pap51R {
+  box-shadow: 0px 13px 60px 9px #b6bacd33;
+}
+
+.final-version .faq-item-o0jx6A {
+  box-shadow: 0px 13px 60px 9px #b6bacd33;
+}
+
+.final-version .faq-item-AKQJOR {
+  box-shadow: 0px 13px 60px 9px #b6bacd33;
+}
+
+.final-version .mapka-ciy8fA {
+  align-self: stretch;
+  background-color: var(--foundationwhitewhite-00);
+  height: 549px;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .image-51-vu7F8x {
+  background-color: transparent;
+  height: 549px;
+  left: 0px;
+  object-fit: cover;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+}
+
+.final-version .footer-section-ciy8fA {
+  align-items: center;
+  align-self: stretch;
+  background-color: var(--foundationwhitewhite-00);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 32px;
+  overflow: hidden;
+  padding: 46px 0;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-71-RiCGQn {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-wrap: wrap;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275358-PM6mzx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  max-width: 372px;
+}
+
+.final-version .logo-horyzontalnie-bez-napisow-kxS6xV {
+  height: 57px;
+  max-width: 300px;
+}
+
+.final-version .oferujemy-monta-i-se-kxS6xV {
+  letter-spacing: 0px;
+  line-height: 21px;
+}
+
+.final-version .dziaamy-na-terenie-k-kxS6xV {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 21px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-70-PM6mzx {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  position: relative;
+  max-width: 216px;
+  width: 100%;
+}
+
+.final-version .linki-Sx2xkl {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundation-greygrey-4);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.07px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .usugi-Sx2xkl {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .realizacje-Sx2xkl {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .proces-Sx2xkl {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .faq-Sx2xkl {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .frame-1171275360-PM6mzx {
+  gap: 18px;
+  max-width: 216px;
+  width: 100%;
+}
+
+.final-version .pozostamy-w-kontakcie-3xJQwh {
+  align-self: stretch;
+  background-color: transparent;
+  color: var(--foundation-greygrey-4);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: -0.07px;
+  line-height: normal;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .x48-514-146-700-3xJQwh {
+  align-self: stretch;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+}
+
+.final-version .biurosterinstalgmailcom-3xJQwh {
+  align-self: stretch;
+  line-height: 16.8px;
+}
+
+.final-version .nip-8733296584-3xJQwh {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .regon-528646650-3xJQwh {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .line-3-RiCGQn {
+  background-color: transparent;
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .copyright-2025-visnet-code-RiCGQn {
+  background-color: transparent;
+  color: var(--primary900);
+  font-family: var(--font-family-figtree);
+  font-size: var(--font-size-s);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0px;
+  line-height: 16.8px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.final-version .rectangle-34-RiCGQn {
+  background-color: transparent;
+  height: 346px;
+  left: 0px;
+  position: absolute;
+  top: 0px;
+  width: 1440px;
+}
+
+.final-version .answer {
+  align-self: stretch;
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 24px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .biurosterinstalgmailcom {
+  background-color: transparent;
+  letter-spacing: 0px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .cta {
+  background-color: transparent;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .done_all_24dp_e8-eae {
+  background-color: transparent;
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.final-version .faq-item {
+  align-items: flex-start;
+  background-color: var(--foundationwhitewhite-00);
+  border: 1px solid;
+  border-color: var(--mystic);
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  justify-content: center;
+  padding: 24px;
+  position: relative;
+  width: 100%;
+  max-width: 845px;
+}
+
+.final-version .format-quote {
+  background-color: transparent;
+  height: 32px;
+  position: relative;
+  width: 32px;
+}
+
+.final-version .frame-1171275360 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.final-version .frame-1171275362 {
+  background-color: transparent;
+  position: relative;
+}
+
+.final-version .frame-1171275363 {
+  background-color: transparent;
+  display: flex;
+  position: relative;
+}
+
+.final-version .frame-1171275386 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 4px;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .frame-1171275401 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  gap: 12px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-1171275403 {
+  background-color: transparent;
+  position: relative;
+}
+
+.final-version .frame-1171275409 {
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.final-version .frame-1171275411 {
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-18 {
+  align-items: flex-start;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  flex-direction: column;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .frame-8449 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  flex-grow: 1;
+  gap: 24px;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .frame-8450 {
+  align-items: center;
+  background-color: transparent;
+  border-radius: 4px;
+  display: inline-flex;
+  flex: 0 0 auto;
+  gap: 12px 12px;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .frame-8453 {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .frame-8454 {
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .frame-8455 {
+  align-self: stretch;
+  display: flex;
+  position: relative;
+}
+
+.final-version .frame-8458 {
+  align-items: flex-start;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  position: relative;
+}
+
+.final-version .frame-8474 {
+  height: 403px;
+  overflow: hidden;
+  position: relative;
+}
+
+.final-version .icon {
+  background-color: transparent;
+  height: 90px;
+  margin-top: -15px;
+  position: relative;
+  width: 90px;
+}
+
+.final-version .klimatyzacja {
+  background-color: transparent;
+  position: relative;
+}
+
+.final-version .logo-horyzontalnie-bez-napisow {
+  background-color: transparent;
+  position: relative;
+}
+
+.final-version .minus {
+  background-color: transparent;
+  height: 24px;
+  position: relative;
+  width: 24px;
+}
+
+.final-version .nisze-rachunki {
+  background-color: transparent;
+  position: relative;
+}
+
+.final-version .oferujemy-monta-i-se {
+  align-self: stretch;
+  background-color: transparent;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .pompy-ciepa {
+  align-self: stretch;
+  background-color: transparent;
+  position: relative;
+}
+
+.final-version .question {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex: 1;
+  flex-grow: 1;
+  gap: 10px;
+  justify-content: center;
+  position: relative;
+}
+
+.final-version .question-content {
+  background-color: transparent;
+  flex: 1;
+  letter-spacing: 0px;
+  line-height: 24px;
+  margin-top: -1px;
+  position: relative;
+  text-align: left;
+}
+
+.final-version .rekuperacja {
+  align-self: stretch;
+  background-color: transparent;
+  position: relative;
+}
+
+.final-version .separator {
+  background-color: #bebebe;
+  height: 130px;
+  position: relative;
+  width: 1px;
+}
+
+.final-version .simplification {
+  background-color: transparent;
+  height: 64px;
+  position: relative;
+  width: 64px;
+}
+
+.final-version .stepnumber {
+  align-items: center;
+  background-color: var(--primary200);
+  display: flex;
+  gap: 6px;
+  height: 24px;
+  justify-content: center;
+  padding: 6px;
+  position: relative;
+  width: 24px;
+}
+
+.final-version .text {
+  background-color: transparent;
+  letter-spacing: 0px;
+  line-height: 19.6px;
+  position: relative;
+  text-align: center;
+  width: fit-content;
+}
+
+.final-version .toggle {
+  align-items: center;
+  align-self: stretch;
+  background-color: transparent;
+  display: flex;
+  flex: 0 0 auto;
+  gap: 8px;
+  position: relative;
+  width: 100%;
+}
+
+.final-version .vector {
+  background-color: transparent;
+  position: absolute;
+}
+
+.final-version .x48-514-146-700 {
+  background-color: transparent;
+  position: relative;
+  text-align: left;
+}
+
+.clickable:hover {
+  cursor: pointer;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: #2f3245;
+}
+.contact-link {
+  color: #094fb7;
+}
+.mailto {
+  color: #ffffff;
+  text-decoration: none;
+}
+.mailto-footer {
+  color: #000000;
+}
+.cta-btn-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+.question:hover {
+  cursor: pointer;
+}
+
+.menu {
+  flex-direction: column;
+  position: absolute;
+  top: 60px;
+  display: none;
+  left: 0;
+  width: 100%;
+  background-color: #fafcff;
+  text-align: center;
+  z-index: 999;
+}
+.menu a {
+  padding: 15px;
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+  display: block;
+  font-family: var(--font-family-figtree);
+}
+.menu a:hover {
+  background-color: #f3f3f3;
+}
+.hamburger {
+  display: block;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+@media (min-width: 871px) {
+  .separator-horizontal,
+  .hamburger,
+  .menu {
+    display: none !important;
+  }
+}
+@media (max-width: 870px) {
+  .frame-1171275362-NYyjAK,
+  .frame-1171275363-xbybsb,
+  .frame-1171275370-P2Wu0C,
+  .frame-1171275397-NYyjAK,
+  .frame-56rh5,
+  .frame-71-RiCGQn {
+    flex-direction: column;
+  }
+  .frame-1171275362-xbybsb,
+  .frame-1171275364-xbybsb {
+    flex-direction: column-reverse;
+  }
+  .frame-8464-uyGmdn,
+  .frame-8470-uyGmdn,
+  .frame-8468-uyGmdn,
+  .frame-8469-uyGmdn {
+    border: none !important;
+    border-right-style: none;
+  }
+  .usugi-ciy8fA {
+    padding: 0 0 120px 0 !important;
+  }
+  .usugi-g0oXkU {
+    padding: 0 !important;
+  }
+  .separator {
+    display: none;
+  }
+  .frame-8474-kGBmyx,
+  .frame-1171275375-f1gTeA,
+  .frame-19-CvMxk7,
+  .phone-lYrxiy,
+  .x48-514-146-700-lYrxiy {
+    display: none !important;
+  }
+  .frame-71-RiCGQn {
+    gap: 24px !important;
+    justify-content: center;
+  }
+  .hero-ciy8fA,
+  .o-nas-co-robimy-124-ciy8fA,
+  .usugi-ciy8fA,
+  .cta-ciy8fA,
+  .usugi-g0oXkU,
+  .realizacje-ciy8fA,
+  .cta-TRvxTD,
+  .sectionfaq-ciy8fA,
+  .footer-section-ciy8fA,
+  .frame-1171275414-LScXtR,
+  .usugi-TRvxTD {
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+  }
+  .frame-71-RiCGQn {
+    align-items: start !important;
+  }
+  .hero-ciy8fA {
+    background-size: contain !important;
+    background-repeat: no-repeat;
+    background-position: center 40px !important;
+  }
+  .frame-1179ajb376 {
+    margin-top: 40px !important;
+  }
+  .kontakt-wiCjKN {
+    font-size: 16px !important;
+  }
+  .frame-1171275362-NYyjAK {
+    gap: 24px !important;
+  }
+  .cta-f1gTeA {
+    width: 100% !important;
+  }
+  .frame-14-R6OUxk {
+    height: 60px !important;
+  }
+  .idealny-klimat-o-kadej-porze-roku-6ca3sx,
+  .figtree-bold-ebony-clay-48px,
+  .zapewniamy-pene-wspa-6wDiwv,
+  .korzystajc-z-naszych-rozwiza-otrzymujesz-P2Wu0C,
+  .co-mwi-o-nas-klienci-xOoXfF,
+  .skontaktuj-si-z-nami-ju-dzi-cOCD8o,
+  .figtree-bold-white-48px {
+    font-size: 48px !important;
+  }
+  .heading-03TqFx {
+    font-size: 40px !important;
+  }
+  .frame-1171275397-NYyjAK {
+    gap: 32px !important;
+  }
+  .frame-1171275377-R6OUxk {
+    margin-top: 80px !important;
+  }
+  .frame-1171275367-jdUhdQ {
+    gap: 72px !important;
+  }
+  .usugi-TRvxTD {
+    padding: 50px 0 100px !important;
+  }
+  .frame-1171275361-fert9N,
+  .image-ceXxkj,
+  .frame-1171275362 {
+    min-height: 340px !important;
+  }
+  .frame-8473-5iUdR6,
+  .frame-8474,
+  .image-59-KEJsOC,
+  .frame-8475-5iUdR6,
+  .frame-8477-5iUdR6 {
+    height: 320px !important;
+  }
+  .frame-1171275362,
+  .frame-1171275364-xbybsb,
+  .frame-1171275363,
+  .frame-8449 {
+    gap: 16px !important;
+  }
+  .frame-1171275360 {
+    gap: 8px !important;
+  }
+  .frame-1171275365-pohat3,
+  .frame-1171275363-pohat3,
+  .frame-1171275366-pohat3 {
+    flex-direction: column;
+    gap: 0 !important;
+  }
+  .frame-1171275397-NYyjAK {
+    align-items: center !important;
+  }
+}
