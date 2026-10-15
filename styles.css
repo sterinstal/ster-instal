@@ -2667,6 +2667,10 @@ input:focus {
   text-align: left;
 }
 
+.answer {
+  max-height: 500px !important;
+}
+
 .final-version .biurosterinstalgmailcom {
   background-color: transparent;
   letter-spacing: 0px;
